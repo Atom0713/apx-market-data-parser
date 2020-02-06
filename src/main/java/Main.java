@@ -25,6 +25,7 @@ public class Main {
 
 
 
+
     public static void readJson() throws JsonParseException, JsonMappingException, MalformedURLException, IOException{
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -33,11 +34,6 @@ public class Main {
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         objectMapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
         objectMapper.configure(DeserializationFeature.READ_DATE_TIMESTAMPS_AS_NANOSECONDS, false);
-
-//        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss.SSSZ");
-//        dateFormat.setTimeZone(TimeZone.getTimeZone("CELT"));
-//        objectMapper.setDateFormat(dateFormat);
-
 
         // convert JSON file to `JsonNode`
         JsonNode quotesArray = objectMapper.readTree(Paths.get("src/main/data/apx-data.json").toFile());
@@ -87,21 +83,13 @@ public class Main {
             newQuoteList.add(tempQuote);
         }
         QuoteResponse quoteResponseNode = new QuoteResponse(newQuoteList);
-        //quoteResponseNode.toString();
+
 
 
         //print nodes
         for(Quote nodes: quoteResponseNode.getQuote()){
             System.out.println("\n"+nodes);
-//            for (QuoteValue values: nodes.getQuoteValues()){
-//                values.toString();
-//                System.out.println("\n"+values);
-////                System.out.println(values.getTLabel());
-////                System.out.println(values.getValue());
-//            }
         }
-        //List<Quote> quote = quoteResponseNode.getQuote();
-        //
 
     }
 
