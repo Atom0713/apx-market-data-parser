@@ -1,3 +1,8 @@
+/* *****************************************************************************
+ *  Name:              Artem Slyusarenko
+ *  Last modified:     06/02/2020
+ **************************************************************************** */
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;

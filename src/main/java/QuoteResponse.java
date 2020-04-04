@@ -1,7 +1,10 @@
+/* *****************************************************************************
+ *  Name:              Artem Slyusarenko
+ *  Last modified:     06/02/2020
+ **************************************************************************** */
+
 import java.util.List;
-/*
- *Created by Artem on 04/02/2020
- */
+
 public class QuoteResponse {
     private List<Quote> quote;
 
