@@ -1,3 +1,8 @@
+/* *****************************************************************************
+ *  Name:              Artem Slyusarenko
+ *  Last modified:     29/03/2020
+ **************************************************************************** */
+
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.*;
 
